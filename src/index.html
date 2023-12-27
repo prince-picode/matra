@@ -1,69 +1,385 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    @@include('./partials/head-css.html')
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
-  @@include('./partials/head-css.html')
-  
-</head>
+  <body <!-- header -->
+    @@include('./partials/navbar.html')
 
-<body class="font-body">
-  <!-- header -->
-  @@include('./partials/navbar.html')
-  
-
-  <!-- Home -->
-  <section class="relative overflow-hidden py-14 lg:py-20">
-    <div class="container mx-auto">
-      <div class="grid md:grid-cols-2 gap-4 items-center">
-        <div class="lg:w-10/12">
-          <h1 class="text-4xl font-bold text-primary xl:text-7xl">Healthy <span class="text-black/80">Salad
-              For Healthy</span> Health</h1>
-          <p class="text-xl text-black/60 mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          </p>
-          <a href="index.html" class="text-white bg-primary border border-primary text-lg font-bold rounded-full inline-block shadow-md shadow-black/40 px-6 py-2 transition ease-in-out duration-800 hover:bg-white hover:text-primary md:text-xl">Get Started</a>
-        </div>
-        <div class="mx-auto relative mt-8 md:mt-0">
-          <img src="assets/images/food_disk.png" alt="food disk"
-            class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 w-10/12 " />
-          <img src="assets/images/food_bg.png" alt="food bg" />
+    <!-- Home -->
+    <section class="relative overflow-hidden py-14 lg:py-20">
+      <div class="container mx-auto">
+        <div class="grid items-center gap-4 md:grid-cols-2">
+          <div class="lg:w-10/12">
+            <h1 class="text-4xl font-bold text-primary xl:text-7xl">
+              Healthy
+              <span class="text-black/80">Salad For Healthy</span> Health
+            </h1>
+            <p class="mb-3 text-xl text-black/60">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <a
+              href="index.html"
+              class="inline-block px-6 py-2 text-lg font-bold text-white transition ease-in-out border rounded-full shadow-md bg-primary border-primary shadow-black/40 duration-800 hover:bg-white hover:text-primary md:text-xl"
+              >Get Started</a
+            >
+          </div>
+          <div class="relative mx-auto mt-8 md:mt-0">
+            <img
+              src="assets/images/food_disk.png"
+              alt="food disk"
+              class="absolute w-10/12 top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+            />
+            <img src="assets/images/food_bg.png" alt="food bg" />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hidden xl:inline">
-      <img src="assets/images/leaf.png" alt="leaf" class="absolute xl:top-2 -z-10" />
-      <img src="assets/images/leaf5.png" alt="leaf" class="absolute xl:top-0 xl:left-1/3 -z-10" />
-      <img src="assets/images/leaf9.png" alt="leaf" class="absolute xl:top-8 xl:right-[37%] -z-10" />
-      <img src="assets/images/leaf10.png" alt="leaf" class="absolute xl:top-20 xl:right-[37.5%] -z-10" />
-      <img src="assets/images/leaf1.png" alt="leaf" class="absolute xl:top-10 xl:right-[10%] -z-10" />
-      <img src="assets/images/leaf14.png" alt="leaf" class="absolute xl:top-24 xl:right-[12%] -z-10" />
-      <img src="assets/images/leaf13.png" alt="leaf" class="absolute xl:bottom-1/4 xl:right-[13%] -z-10" />
-      <img src="assets/images/leaf12.png" alt="leaf" class="absolute xl:bottom-[12%] xl:right-[15%] -z-10" />
-      <img src="assets/images/leaf2.png" alt="leaf" class="absolute xl:bottom-0 xl:right-[18%] -z-10" />
-      <img src="assets/images/leaf8.png" alt="leaf" class="absolute xl:-bottom-8 xl:right-[25%] -z-10" />
-      <img src="assets/images/leaf7.png" alt="leaf" class="absolute xl:bottom-[8%] xl:right-[42%] -z-10" />
-      <img src="assets/images/leaf15.png" alt="leaf" class="absolute xl:bottom-[20%] xl:left-[35%] -z-10" />
-      <img src="assets/images/leaf6.png" alt="leaf" class="absolute xl:bottom-[45%] xl:left-[46%] -z-10" />
-      <img src="assets/images/leaf4.png" alt="leaf" class="absolute xl:bottom-[4%] xl:left-[10%] -z-10" />
-      <img src="assets/images/leaf3.png" alt="leaf" class="absolute xl:bottom-0 xl:left-0 -z-10" />
-      <img src="assets/images/leaf6.png" alt="leaf" class="absolute xl:bottom-[48%] xl:-left-8 -z-10" />
-      <img src="assets/images/leaf5.png" alt="leaf" class="absolute xl:top-[36%] xl:right-[2%] -z-10" />
-    </div>
-    <div
-      class="bg-primary/20 absolute rounded-full h-[430px] w-[370px] top-2/4 left-2/4 -translate-y-2/4  translate-x-2/4 -z-10 invisible md:visible lg:h-[800px] lg:w-[800px] lg:translate-x-1/3 xl:h-[1300px] xl:w-[1300px]">
-    </div>
-  </section>
+      <div class="hidden xl:inline">
+        <img
+          src="assets/images/leaf.png"
+          alt="leaf"
+          class="absolute xl:top-2 -z-10"
+        />
+        <img
+          src="assets/images/leaf5.png"
+          alt="leaf"
+          class="absolute xl:top-0 xl:left-1/3 -z-10"
+        />
+        <img
+          src="assets/images/leaf9.png"
+          alt="leaf"
+          class="absolute xl:top-8 xl:right-[37%] -z-10"
+        />
+        <img
+          src="assets/images/leaf10.png"
+          alt="leaf"
+          class="absolute xl:top-20 xl:right-[37.5%] -z-10"
+        />
+        <img
+          src="assets/images/leaf1.png"
+          alt="leaf"
+          class="absolute xl:top-10 xl:right-[10%] -z-10"
+        />
+        <img
+          src="assets/images/leaf14.png"
+          alt="leaf"
+          class="absolute xl:top-24 xl:right-[12%] -z-10"
+        />
+        <img
+          src="assets/images/leaf13.png"
+          alt="leaf"
+          class="absolute xl:bottom-1/4 xl:right-[13%] -z-10"
+        />
+        <img
+          src="assets/images/leaf12.png"
+          alt="leaf"
+          class="absolute xl:bottom-[12%] xl:right-[15%] -z-10"
+        />
+        <img
+          src="assets/images/leaf2.png"
+          alt="leaf"
+          class="absolute xl:bottom-0 xl:right-[18%] -z-10"
+        />
+        <img
+          src="assets/images/leaf8.png"
+          alt="leaf"
+          class="absolute xl:-bottom-8 xl:right-[25%] -z-10"
+        />
+        <img
+          src="assets/images/leaf7.png"
+          alt="leaf"
+          class="absolute xl:bottom-[8%] xl:right-[42%] -z-10"
+        />
+        <img
+          src="assets/images/leaf15.png"
+          alt="leaf"
+          class="absolute xl:bottom-[20%] xl:left-[35%] -z-10"
+        />
+        <img
+          src="assets/images/leaf6.png"
+          alt="leaf"
+          class="absolute xl:bottom-[45%] xl:left-[46%] -z-10"
+        />
+        <img
+          src="assets/images/leaf4.png"
+          alt="leaf"
+          class="absolute xl:bottom-[4%] xl:left-[10%] -z-10"
+        />
+        <img
+          src="assets/images/leaf3.png"
+          alt="leaf"
+          class="absolute xl:bottom-0 xl:left-0 -z-10"
+        />
+        <img
+          src="assets/images/leaf6.png"
+          alt="leaf"
+          class="absolute xl:bottom-[48%] xl:-left-8 -z-10"
+        />
+        <img
+          src="assets/images/leaf5.png"
+          alt="leaf"
+          class="absolute xl:top-[36%] xl:right-[2%] -z-10"
+        />
+      </div>
+      <div
+        class="bg-primary/20 absolute rounded-full h-[430px] w-[370px] top-2/4 left-2/4 -translate-y-2/4 translate-x-2/4 -z-10 invisible md:visible lg:h-[800px] lg:w-[800px] lg:translate-x-1/3 xl:h-[1300px] xl:w-[1300px]"
+      ></div>
+    </section>
+    <section class="relative overflow-hidden py-14 lg:py-20">
+      <div class="container mx-auto">
+        <div class="grid items-center gap-4 md:grid-cols-2">
+          <div class="lg:w-10/12">
+            <h1 class="text-4xl font-bold text-primary xl:text-7xl">
+              Healthy
+              <span class="text-black/80">Salad For Healthy</span> Health
+            </h1>
+            <p class="mb-3 text-xl text-black/60">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <a
+              href="index.html"
+              class="inline-block px-6 py-2 text-lg font-bold text-white transition ease-in-out border rounded-full shadow-md bg-primary border-primary shadow-black/40 duration-800 hover:bg-white hover:text-primary md:text-xl"
+              >Get Started</a
+            >
+          </div>
+          <div class="relative mx-auto mt-8 md:mt-0">
+            <img
+              src="assets/images/food_disk.png"
+              alt="food disk"
+              class="absolute w-10/12 top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+            />
+            <img src="assets/images/food_bg.png" alt="food bg" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden xl:inline">
+        <img
+          src="assets/images/leaf.png"
+          alt="leaf"
+          class="absolute xl:top-2 -z-10"
+        />
+        <img
+          src="assets/images/leaf5.png"
+          alt="leaf"
+          class="absolute xl:top-0 xl:left-1/3 -z-10"
+        />
+        <img
+          src="assets/images/leaf9.png"
+          alt="leaf"
+          class="absolute xl:top-8 xl:right-[37%] -z-10"
+        />
+        <img
+          src="assets/images/leaf10.png"
+          alt="leaf"
+          class="absolute xl:top-20 xl:right-[37.5%] -z-10"
+        />
+        <img
+          src="assets/images/leaf1.png"
+          alt="leaf"
+          class="absolute xl:top-10 xl:right-[10%] -z-10"
+        />
+        <img
+          src="assets/images/leaf14.png"
+          alt="leaf"
+          class="absolute xl:top-24 xl:right-[12%] -z-10"
+        />
+        <img
+          src="assets/images/leaf13.png"
+          alt="leaf"
+          class="absolute xl:bottom-1/4 xl:right-[13%] -z-10"
+        />
+        <img
+          src="assets/images/leaf12.png"
+          alt="leaf"
+          class="absolute xl:bottom-[12%] xl:right-[15%] -z-10"
+        />
+        <img
+          src="assets/images/leaf2.png"
+          alt="leaf"
+          class="absolute xl:bottom-0 xl:right-[18%] -z-10"
+        />
+        <img
+          src="assets/images/leaf8.png"
+          alt="leaf"
+          class="absolute xl:-bottom-8 xl:right-[25%] -z-10"
+        />
+        <img
+          src="assets/images/leaf7.png"
+          alt="leaf"
+          class="absolute xl:bottom-[8%] xl:right-[42%] -z-10"
+        />
+        <img
+          src="assets/images/leaf15.png"
+          alt="leaf"
+          class="absolute xl:bottom-[20%] xl:left-[35%] -z-10"
+        />
+        <img
+          src="assets/images/leaf6.png"
+          alt="leaf"
+          class="absolute xl:bottom-[45%] xl:left-[46%] -z-10"
+        />
+        <img
+          src="assets/images/leaf4.png"
+          alt="leaf"
+          class="absolute xl:bottom-[4%] xl:left-[10%] -z-10"
+        />
+        <img
+          src="assets/images/leaf3.png"
+          alt="leaf"
+          class="absolute xl:bottom-0 xl:left-0 -z-10"
+        />
+        <img
+          src="assets/images/leaf6.png"
+          alt="leaf"
+          class="absolute xl:bottom-[48%] xl:-left-8 -z-10"
+        />
+        <img
+          src="assets/images/leaf5.png"
+          alt="leaf"
+          class="absolute xl:top-[36%] xl:right-[2%] -z-10"
+        />
+      </div>
+      <div
+        class="bg-primary/20 absolute rounded-full h-[430px] w-[370px] top-2/4 left-2/4 -translate-y-2/4 translate-x-2/4 -z-10 invisible md:visible lg:h-[800px] lg:w-[800px] lg:translate-x-1/3 xl:h-[1300px] xl:w-[1300px]"
+      ></div>
+    </section>
+    <section class="relative overflow-hidden py-14 lg:py-20">
+      <div class="container mx-auto">
+        <div class="grid items-center gap-4 md:grid-cols-2">
+          <div class="lg:w-10/12">
+            <h1 class="text-4xl font-bold text-primary xl:text-7xl">
+              Healthy
+              <span class="text-black/80">Salad For Healthy</span> Health
+            </h1>
+            <p class="mb-3 text-xl text-black/60">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <a
+              href="index.html"
+              class="inline-block px-6 py-2 text-lg font-bold text-white transition ease-in-out border rounded-full shadow-md bg-primary border-primary shadow-black/40 duration-800 hover:bg-white hover:text-primary md:text-xl"
+              >Get Started</a
+            >
+          </div>
+          <div class="relative mx-auto mt-8 md:mt-0">
+            <img
+              src="assets/images/food_disk.png"
+              alt="food disk"
+              class="absolute w-10/12 top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4"
+            />
+            <img src="assets/images/food_bg.png" alt="food bg" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden xl:inline">
+        <img
+          src="assets/images/leaf.png"
+          alt="leaf"
+          class="absolute xl:top-2 -z-10"
+        />
+        <img
+          src="assets/images/leaf5.png"
+          alt="leaf"
+          class="absolute xl:top-0 xl:left-1/3 -z-10"
+        />
+        <img
+          src="assets/images/leaf9.png"
+          alt="leaf"
+          class="absolute xl:top-8 xl:right-[37%] -z-10"
+        />
+        <img
+          src="assets/images/leaf10.png"
+          alt="leaf"
+          class="absolute xl:top-20 xl:right-[37.5%] -z-10"
+        />
+        <img
+          src="assets/images/leaf1.png"
+          alt="leaf"
+          class="absolute xl:top-10 xl:right-[10%] -z-10"
+        />
+        <img
+          src="assets/images/leaf14.png"
+          alt="leaf"
+          class="absolute xl:top-24 xl:right-[12%] -z-10"
+        />
+        <img
+          src="assets/images/leaf13.png"
+          alt="leaf"
+          class="absolute xl:bottom-1/4 xl:right-[13%] -z-10"
+        />
+        <img
+          src="assets/images/leaf12.png"
+          alt="leaf"
+          class="absolute xl:bottom-[12%] xl:right-[15%] -z-10"
+        />
+        <img
+          src="assets/images/leaf2.png"
+          alt="leaf"
+          class="absolute xl:bottom-0 xl:right-[18%] -z-10"
+        />
+        <img
+          src="assets/images/leaf8.png"
+          alt="leaf"
+          class="absolute xl:-bottom-8 xl:right-[25%] -z-10"
+        />
+        <img
+          src="assets/images/leaf7.png"
+          alt="leaf"
+          class="absolute xl:bottom-[8%] xl:right-[42%] -z-10"
+        />
+        <img
+          src="assets/images/leaf15.png"
+          alt="leaf"
+          class="absolute xl:bottom-[20%] xl:left-[35%] -z-10"
+        />
+        <img
+          src="assets/images/leaf6.png"
+          alt="leaf"
+          class="absolute xl:bottom-[45%] xl:left-[46%] -z-10"
+        />
+        <img
+          src="assets/images/leaf4.png"
+          alt="leaf"
+          class="absolute xl:bottom-[4%] xl:left-[10%] -z-10"
+        />
+        <img
+          src="assets/images/leaf3.png"
+          alt="leaf"
+          class="absolute xl:bottom-0 xl:left-0 -z-10"
+        />
+        <img
+          src="assets/images/leaf6.png"
+          alt="leaf"
+          class="absolute xl:bottom-[48%] xl:-left-8 -z-10"
+        />
+        <img
+          src="assets/images/leaf5.png"
+          alt="leaf"
+          class="absolute xl:top-[36%] xl:right-[2%] -z-10"
+        />
+      </div>
+      <div
+        class="bg-primary/20 absolute rounded-full h-[430px] w-[370px] top-2/4 left-2/4 -translate-y-2/4 translate-x-2/4 -z-10 invisible md:visible lg:h-[800px] lg:w-[800px] lg:translate-x-1/3 xl:h-[1300px] xl:w-[1300px]"
+      ></div>
+    </section>
 
-  
-  <!-- Footer -->
-  @@include('./partials/footer.html')
+    <!-- Footer -->
+    @@include('./partials/footer.html')
 
-
-  <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/pages/index.init.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
-
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/pages/index.init.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

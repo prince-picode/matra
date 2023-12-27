@@ -14,16 +14,7 @@ module.exports = {
       body: ['League Spartan']
     },
     extend: {},
-    container:{
-      padding:{
-        DEFAULT:'1rem',
-        sm:'1rem',
-        lg:'45px',
-        xl:'5rem',
-        '2xl':'13rem',
-      },
-      margin:'0 auto',
-    }
+   
   },
   plugins: [],
 }
