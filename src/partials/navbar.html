@@ -1,0 +1,81 @@
+<nav class="bg-white shadow md:flex md:items-center md:justify-evenly sticky top-0 nav">
+    <div class="container md:flex justify-between py-4">
+        <div class="flex justify-between items-center ">
+            <a href="../index.html" class="text-2xl cursor-pointer">
+                <img src="../assets/images/logo.png" alt="logo" class="w-44 sm:w-28 lg:w-52">
+            </a>
+
+            <span class="text-3xl cursor-pointer md:hidden block">
+                <i class="fa-solid fa-bars" onclick="Menu(this)"></i>
+            </span>
+        </div>
+
+        <ul
+            class="navbar md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-3 my-6 md:my-0 md:mx-4">
+                <a href="../index.html" class="text-primary font-bold text-xl duration-500">Home</a>
+            </li>
+            <li class="mx-2 my-6 md:my-0 lg:mx-4 group relative has-child">
+                <a href="#" class="text-black/80 font-bold text-xl duration-500 hover:text-primary">Pages <i
+                        class="fa-solid fa-chevron-down text-sm"></i></a>
+                <ul class="drop-down-menu min-w-200">
+                    <li class="hover:bg-primary/20">
+                        <a href="../about.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">About Us</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../service.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Services</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../portfolio.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Portfolio</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../team.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Team</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../pricing.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Pricing</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../404.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">404 Page</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../403.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">403 Page</a>
+                    </li>
+                </ul>
+            </li>  
+            <li class="mx-2 my-6 md:my-0 lg:mx-4 group relative has-child">
+                <a href="#" class="text-black/80 font-bold text-xl duration-500 hover:text-primary">Products <i
+                        class="fa-solid fa-chevron-down text-sm"></i></a>
+                <ul class="drop-down-menu min-w-200">
+                    <li class="hover:bg-primary/20">
+                        <a href="../product.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Product</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../product-details.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Product Details</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mx-2 my-6 md:my-0 lg:mx-4 group relative has-child">
+                <a href="#" class="text-black/80 font-bold text-xl duration-500 hover:text-primary">Blog <i
+                        class="fa-solid fa-chevron-down text-sm"></i></a>
+                <ul class="drop-down-menu min-w-200">
+                    <li class="hover:bg-primary/20">
+                        <a href="../two-column-blog.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Two
+                            column</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../three-column-blog.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Three
+                            column</a>
+                    </li>
+                    <li class="hover:bg-primary/20">
+                        <a href="../blog-details.html" class="menu-sub-item text-lg text-blueGray-600 hover:text-primary">Blog
+                            Details</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mx-2 my-6 md:my-0 lg:mx-4">
+                <a href="../contact.html" class="text-black/80 font-bold text-xl duration-500 hover:text-primary">Contact Us</a>
+            </li>
+            <button class="text-white bg-primary border border-primary ml-3 text-lg font-bold rounded-full shadow-md shadow-black/40 px-6 py-2 inline-block transition ease-in-out duration-800 hover:bg-white hover:text-primary xl:text-xl">Get Started</button>
+        </ul>
+    </div>
+</nav>
