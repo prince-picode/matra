@@ -1,149 +1,338 @@
-<nav class="flex items-center justify-between h-16 px-40 bg-white">
-  <div class="w-24 mx-8 md:w-28 lg:w-32">
-    <a href="../index.html" class="text-2xl cursor-pointer">
-      <img
-        src="../assets/pics/logo-dark.png"
-        alt="logo"
-        class="w-auto h-auto"
-      />
-    </a>
-  </div>
-  <span class="block mx-5 text-3xl cursor-pointer md:hidden">
-    <i class="fa-solid fa-bars" onclick="Menu(this)"></i>
-  </span>
+<header class="fixed top-0 left-0 z-50 w-full bg-transparent" id="header">
+    <nav class="container relative mx-auto ">
+        <div class="flex items-center justify-between mx-2">
+            <div class="">
+                <img
+                    src="../assets/pics/logo-dark.png"
+                    alt=""
+                    class="h-10 my-2 w-28"
+                />
+            </div>
+            <div class="hidden space-x-6 md:flex">
 
-  <div>
-    <ul
-      class="navbar md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 font-bold capitalize text-xl text-[#3c4858]"
-    >
-      <li class="relative mx-2 my-6 font-bold md:my-0 lg:mx-4 group has-child">
-        <a href="#" class="hover:text-primary"
-          >Home <i class="text-sm fa-solid fa-chevron-down"></i
-        ></a>
-        <ul class="drop-down-menu min-w-200">
-          <li class="hover:bg-primary/20">
-            <a
-              href="../two-column-blog.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Two column</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../three-column-blog.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Three column</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../blog-details.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Blog Details</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="relative mx-2 my-6 md:my-0 lg:mx-4 group has-child">
-        <a href="#" class="hover:text-primary"
-          >Pages <i class="text-sm fa-solid fa-chevron-down"></i
-        ></a>
-        <ul class="drop-down-menu min-w-200">
-          <li class="hover:bg-primary/20">
-            <a
-              href="../about.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >About Us</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../service.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Services</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../portfolio.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Portfolio</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../team.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Team</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../pricing.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Pricing</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../404.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >404 Page</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../403.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >403 Page</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="relative mx-2 my-6 md:my-0 lg:mx-4 group has-child">
-        <a href="#" class="hover:text-primary"
-          >Shop <i class="text-sm fa-solid fa-chevron-down"></i
-        ></a>
-        <ul class="drop-down-menu min-w-200">
-          <li class="hover:bg-primary/20">
-            <a
-              href="../product.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Grid View</a
-            >
-          </li>
-          <li class="hover:bg-primary/20">
-            <a
-              href="../product-details.html"
-              class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
-              >Product Details</a
-            >
-          </li>
-        </ul>
-      </li>
+                <ul
+                    class="flex items-center md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 font-bold capitalize text-xl text-[#3c4858]"
+                >
+                    <li
+                        class="relative mx-2 my-6 font-bold list-none md:my-0 lg:mx-4 group has-child"
+                    >
+                        <a href="#" class="hover:text-primary text-[#212529] "
+                            >Home
+                            <i class="text-sm fa-solid fa-chevron-down"></i
+                        ></a>
+                        <ul class="list-none drop-down-menu min-w-200">
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="index.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Home one</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../HomeTwo.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Home two</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../blog-details.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Home three</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="relative mx-2 my-6 list-none md:my-0 lg:mx-4 group has-child"
+                    >
+                        <a href="#" class="hover:text-primary text-[#212529]"
+                            >Pages
+                            <i class="text-sm fa-solid fa-chevron-down"></i
+                        ></a>
+                        <ul class="drop-down-menu min-w-200">
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../about.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >About Us</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../service.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Services</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../portfolio.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Portfolio</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../team.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Team</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../pricing.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Pricing</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../404.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >404 Page</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../403.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >403 Page</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li
+                        class="relative mx-2 my-6 md:my-0 lg:mx-4 group has-child text-[#212529]"
+                    >
+                        <a href="#" class="hover:text-primary"
+                            >Shop
+                            <i class="text-sm fa-solid fa-chevron-down"></i
+                        ></a>
+                        <ul class="drop-down-menu min-w-200">
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../product.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Grid View</a
+                                >
+                            </li>
+                            <li class="hover:bg-primary/20">
+                                <a
+                                    href="../product-details.html"
+                                    class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                    >Product Details</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
 
-      <li class="mx-3 my-6 md:my-0 md:mx-4">
-        <a href="../index.html" class="">Contact</a>
-      </li>
-      <li class="mx-3 my-6 md:my-0 md:mx-4">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </li>
-      <li class="mx-3 my-6 md:my-0 md:mx-4">
-        <i class="fa-regular fa-user"></i>
-      </li>
-      <li class="mx-3 my-6 md:my-0 md:mx-4">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </li>
-      <li class="mx-3 my-6 md:my-0 md:mx-4">
-        <i class="fa-regular fa-heart"></i>
-      </li>
+                    <li class="mx-3 my-6 md:my-0 md:mx-4">
+                        <a href="../index.html" class="text-[#212529]">Contact</a>
+                    </li>
+                    <li class="mx-3 my-6 md:my-0 md:mx-4">
+                        <i class="fa-solid fa-magnifying-glass text-[#212529]"></i>
+                    </li>
+                    <li class="mx-3 my-6 md:my-0 md:mx-4">
+                        <i class="fa-regular fa-user text-[#212529]"></i>
+                    </li>
+                    <li class="mx-3 my-6 md:my-0 md:mx-4">
+                        <i class="fa-solid fa-cart-shopping text-[#212529]"></i>
+                    </li>
+                    <li class="mx-3 my-6 md:my-0 md:mx-4">
+                        <i class="fa-regular fa-heart"></i>
+                    </li>
+                </ul>
+            </div>
 
-<!-- <button
-        class="inline-block px-6 py-2 ml-3 text-lg font-bold text-white transition ease-in-out border rounded-full shadow-md bg-primary border-primary shadow-black/40 duration-800 hover:bg-white hover:text-primary xl:text-xl"
-      >
-        Get Started
-      </button> -->
+            <!-- <div class="hidden space-x-6 md:flex">
 
-    </ul>
-  </div>
-</nav>
+                <ul
+                    class="text-[#3c4858] flex opacity-100 transition-all ease-in duration-500"
+                >
+                <li class="relative mx-2 my-6 font-bold md:my-0 lg:mx-4 group has-child">
+                    <a href="#" class="hover:text-primary"
+                        >Home <i class="text-sm fa-solid fa-chevron-down"></i
+                    ></a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../about.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >About Us</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../service.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Services</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../portfolio.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Portfolio</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../team.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Team</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../pricing.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Pricing</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../404.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >404 Page</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../403.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >403 Page</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative mx-2 my-6 md:my-0 lg:mx-4 group has-child">
+                    <a href="#" class="hover:text-primary"
+                        >Pages <i class="text-sm fa-solid fa-chevron-down"></i
+                    ></a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../about.html"
+
+                                class="text-lg font-bold menu-sub-item text-blueGray-600 hover:text-primary"
+                                >About Us</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../service.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Services</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../portfolio.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Portfolio</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../team.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Team</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../pricing.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Pricing</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../404.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >404 Page</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../403.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >403 Page</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative mx-2 my-6 md:my-0 lg:mx-4 group has-child">
+                    <a href="#" class="hover:text-primary"
+                        >Shop <i class="text-sm fa-solid fa-chevron-down"></i
+                    ></a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../product.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Grid View</a
+                            >
+                        </li>
+                        <li class="hover:bg-primary/20">
+                            <a
+                                href="../product-details.html"
+                                class="text-lg menu-sub-item text-blueGray-600 hover:text-primary"
+                                >Product Details</a
+                            >
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+                <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+            </div> -->
+
+            <!-- Hamburger Icon -->
+            <button
+                id="menu-btn"
+                class="block hamburger md:hidden focus:outline-none"
+            >
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div
+                id="menu"
+                class="absolute flex-col items-center self-end hidden w-full h-auto py-8 mt-0 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+            >
+                <a href="#">Prcing</a>
+                <a href="#">Product</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Community</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const btn = document.getElementById("menu-btn");
+    const nav = document.getElementById("menu");
+
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("open");
+        nav.classList.toggle("flex");
+        nav.classList.toggle("hidden");
+    });
+    const scrollHeader = () => {
+        const header = document.getElementById("header");
+
+        // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+        this.scrollY >= 50
+            ? header.classList.add("scroll-header")
+            : header.classList.remove("scroll-header");
+    };
+    window.addEventListener("scroll", scrollHeader);
+</script>
+

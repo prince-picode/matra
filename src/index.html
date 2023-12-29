@@ -3,139 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            href="assets/libs/swiper/swiper-bundle.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
-            integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
 
-        <style>
-            .pop-pop {
-                font-family: "Roboto", sans-serif;
-            }
-
-            .btn2 span:first-child {
-                transform: translateX(-101%);
-                transition: transform 0.3s ease-in;
-            }
-
-            .btn2:hover span {
-                transform: translateX(0);
-            }
-
-            .slider-image {
-                background-color: #fff;
-                border-radius: 40% 50px;
-                padding: 0 60px;
-                position: relative;
-                z-index: 1;
-            }
-        </style>
 
         @@include('./partials/head-css.html')
     </head>
 
     <body>
-        <!-- header -->
-        @@include('./partials/navbar.html')
+        @@include('./Homeone.html')
 
-        <!-- Home -->
+        <!-- Home Two -->
 
-        @@include('./partials/HeroSection.html')
+        @@include('./HomeTwo.html')
 
-        <!-- Section1 -->
-        @@include('./partials/components/Section1.html')
 
-        <div class="w-full h-full py-8 bg-[#b5d7d6]">
-            <div class="max-w-[1500px] mx-auto py-10">
-                <p class="text-3xl font-bold text-center text-black">
-                    Classic Range Of Sofas
-                </p>
-                <p class="py-2 text-2xl text-center text-[#6c757d]">
-                    Find a bright ideal to suit your taste with our great
-                    selection of suspension.
-                </p>
-                <div class="flex items-center justify-center">
-                    <button
-                        class="relative px-10 py-5 mt-8 overflow-hidden font-semibold leading-none tracking-wider uppercase border border-black text-balance btn2 hover:text-white"
-                        type="button"
-                    >
-                        <span class="absolute inset-0 bg-black"></span>
-                        <span
-                            class="absolute inset-0 flex items-center justify-center font-bold"
-                        >
-                            Shop Now
-                        </span>
-                        Shop Now
-                    </button>
-                </div>
 
-                <div class="flex items-center justify-center py-10">
-                    <img
-                        src="./assets/pics/banner_1.png"
-                        class="object-cover w-full h-full"
-                        alt=""
-                        srcset=""
-                    />
-                </div>
-            </div>
-        </div>
 
-        <div class="w-full h-full py-8 bg-white">
-            <div class="max-w-[1500px] mx-auto py-10">
-                <p class="text-3xl font-bold text-center text-black">
-                    Our Blog
-                </p>
-                <p class="py-2 text-2xl text-center text-[#6c757d]">
-                    Find a bright ideal to suit your taste with our great
-                    selection.
-                </p>
-                <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
-                    <div class="bg-[#f1f1f1]">
-                        <div class="w-full h-full">
-                            <div class="group">
-                                <img
-                                    src="./assets/pics/blog_1.png"
-                                    alt=""
-                                    class="object-cover w-full h-full transition-all rounded-md group-hover:scale-50"
-                                />
-                            </div>
-                            <div
-                                class="flex flex-col items-center justify-center"
-                            >
-                                <div class="text-2xl text-[#495057] pop-pop">
-                                    <p>Wooden Chair</p>
-                                </div>
-                                <p class="text-center text-[#6c757d]">
-                                    This product is handcrafted by skilled
-                                    artisans, and <br />
-                                    therefore will have minor variations. Actual
-                                    product <br />
-                                    colour may vary from the images shown due to
-                                    lighting <br />
-                                    conditions.
-                                </p>
-                                <div class="py-4">
-                                    <p class="text-2xl text-black">
-                                        <del class="text-[#6c757d]"
-                                            >$9.59.00</del
-                                        >
-                                        $5,69.00
-                                    </p>
-                                </div>
-                                <button class="py-2 text-2xl">Shop Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- <section class="relative overflow-hidden py-14 lg:py-20">
       <div class="container mx-auto">
@@ -259,8 +141,7 @@
       ></div>
     </section> -->
 
-        <!-- Footer -->
-        <!-- @@include('./partials/footer.html') -->
+
 
         <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
         <script src="assets/js/pages/index.init.js"></script>
