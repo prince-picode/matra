@@ -1,5 +1,5 @@
 <header class="fixed top-0 left-0 z-50 w-full bg-transparent" id="header">
-    <nav class="container relative mx-auto ">
+    <nav class="container relative mx-auto">
         <div class="flex items-center justify-between mx-2">
             <div class="">
                 <img
@@ -9,14 +9,13 @@
                 />
             </div>
             <div class="hidden space-x-6 md:flex">
-
                 <ul
                     class="flex items-center md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 font-bold capitalize text-xl text-[#3c4858]"
                 >
                     <li
                         class="relative mx-2 my-6 font-bold list-none md:my-0 lg:mx-4 group has-child"
                     >
-                        <a href="#" class="hover:text-primary text-[#212529] "
+                        <a href="#" class="hover:text-primary text-[#212529]"
                             >Home
                             <i class="text-sm fa-solid fa-chevron-down"></i
                         ></a>
@@ -129,10 +128,14 @@
                     </li>
 
                     <li class="mx-3 my-6 md:my-0 md:mx-4">
-                        <a href="../index.html" class="text-[#212529]">Contact</a>
+                        <a href="../index.html" class="text-[#212529]"
+                            >Contact</a
+                        >
                     </li>
                     <li class="mx-3 my-6 md:my-0 md:mx-4">
-                        <i class="fa-solid fa-magnifying-glass text-[#212529]"></i>
+                        <i
+                            class="fa-solid fa-magnifying-glass text-[#212529]"
+                        ></i>
                     </li>
                     <li class="mx-3 my-6 md:my-0 md:mx-4">
                         <i class="fa-regular fa-user text-[#212529]"></i>
@@ -304,13 +307,37 @@
         <div class="md:hidden">
             <div
                 id="menu"
-                class="absolute flex-col items-center self-end hidden w-full h-auto py-8 mt-0 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+                class="absolute left-0 flex-col self-end hidden w-full h-auto px-3 py-8 mt-0 space-y-6 font-bold bg-white sm:w-full sm:self-center right-6 drop-shadow-md"
             >
-                <a href="#">Prcing</a>
-                <a href="#">Product</a>
-                <a href="#">About Us</a>
-                <a href="#">Careers</a>
-                <a href="#">Community</a>
+                <ul class="">
+                    <li class="flex justify-between group has-child">
+                        <a href="#" class="hover:text-primary text-[#212529]"
+                            >Home
+                        </a>
+                        <i class="text-sm fa-solid fa-chevron-down"></i>
+                    </li>
+                    <ul class="px-2 pt-2 min-w-20">
+                        <li class="">
+                            <a
+                                href="index.html"
+                                class="text-blueGray-600 hover:text-primary"
+                                >Home one</a
+                            >
+                        </li>
+                        <li class="">
+                            <a href="../HomeTwo.html" class="hover:text-primary"
+                                >Home two</a
+                            >
+                        </li>
+                        <li class="">
+                            <a
+                                href="../blog-details.html"
+                                class="hover:text-primary"
+                                >Home three</a
+                            >
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </div>
     </nav>
@@ -335,4 +362,3 @@
     };
     window.addEventListener("scroll", scrollHeader);
 </script>
-
