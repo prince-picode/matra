@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <style>
+            .wrapper i.button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 36px;
+                width: 36px;
+                background-color: #343f4f;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 36px;
+                color: #fff;
+                font-size: 15px;
+                transition: all 0.3s linear;
+                z-index: 100;
+                cursor: pointer;
+            }
+            i.button:active {
+                transform: scale(0.94) translateY(-50%);
+            }
+            i#prev {
+                left: 25px;
+            }
+            i#next {
+                right: 25px;
+            }
+            .image-container {
+                height: 320px;
+                max-width: 500px;
+                width: 100%;
+                overflow: hidden;
+            }
+            .image-container .carousel {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                transition: all 0.4s ease;
+            }
+            .carousel img {
+                height: 100%;
+                width: 100%;
+                border-radius: 18px;
+                border: 10px solid #fff;
+                object-fit: cover;
+            }
+        </style> -->
+
+        @@include('./partials/head-css.html')
+    </head>
+    <body>
+        @@include('./partials/navbar.html')
+        <div class="bg-[#e9ecef] w-full h-[1000px]">
+            <div class="container mx-auto">
+                <div class="bg-primary h-[800px] flex items-center justify-center">
+                    <i class="fa-solid fa-arrow-left button" id="prev"></i>
+                    <div class="grid md:grid-cols-2 lg:max-w-[1500px] mx-auto">
+                        <div
+                            class="flex flex-col justify-center lg:items-start md:text-start"
+                        >
+                            <div class="mx-auto my-5 md:mx-5 md:my-20">
+                                <h1
+                                    class="pb-3 text-2xl font-bold md:text-center lg:pb-6 sm:pb-4 lg:text-start md:text-6xl pop-pop"
+                                >
+                                   best seller
+                                </h1>
+
+                                <h1
+                                    class="p-2 text-xl font-bold text-center lg:text-start md:text-3xl pop-pop"
+                                >
+                                    Classic. Foldable. Solid
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right button" id="prev"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,446 +1,573 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        @@include('./partials/head-css.html')
+    </head>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
 
-    @@include('./partials/head-css.html')
-</head>
-<style>
-    html,
-    body {
-        position: relative;
-        height: 100%;
-    }
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-    }
-
-    swiper-container {
-        width: 100%;
-        height: 78%;
-    }
-
-    @media screen and (max-width: 992px) {
         swiper-container {
             width: 100%;
-            height: 60%;
+            height: 78%;
         }
-    }
 
-    @media screen and (max-width: 600px) {
-        swiper-container {
+        @media screen and (max-width: 992px) {
+            swiper-container {
+                width: 100%;
+                height: 60%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            swiper-container {
+                width: 100%;
+                height: 45%;
+            }
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
             width: 100%;
-            height: 45%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
         }
-    }
 
-    swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        swiper-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: relative;
-    }
+        .zip-zip {
+            font-family: "Raleway", sans-serif;
+        }
 
-    swiper-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
+        .data {
+            box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.15) inset;
+        }
 
-    .zip-zip {
-        font-family: "Raleway", sans-serif;
-    }
+        .p-btn-active {
+            transform: translateY(-10px);
+        }
 
-    .data {
-        box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.15) inset;
-    }
+        .filter_buttons button.active {
+            color: darkorange;
+        }
+    </style>
 
-    .p-btn-active {
-        transform: translateY(-10px);
-    }
+    <body>
+        @@include('./partials/navbar.html')
 
-    .filter_buttons button.active {
-        color: darkorange;
-    }
-</style>
-
-<body>
-    @@include('./partials/navbar.html')
-
-    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="0"
-        loop="true">
-        <swiper-slide class="">
-            <img src="./assets/pics/banner_3.png" alt="" srcset="" />
-            <div class="absolute zip-zip">
-                <p class="py-2 text-xl text-white lg:text-2xl md:text-xl">
-                    New Product
-                </p>
-                <p class="text-5xl font-bold text-white lg:text-7xl">
-                    Flexible
-                </p>
-                <p class="py-2 text-xs text-white lg:text-xl">
-                    Your sleep affects both your body and mind. When you
-                    <br />
-                    can sleep comfortably,
-                </p>
-            </div>
-        </swiper-slide>
-        <swiper-slide class="">
-            <img src="./assets/pics/banner_2.png" alt="" srcset="" />
-            <div class="absolute zip-zip">
-                <p class="py-2 text-xl text-white lg:text-2xl md:text-xl">
-                    New Product
-                </p>
-                <p class="text-5xl font-bold text-white lg:text-7xl">
-                    Flexible
-                </p>
-                <p class="py-2 text-xs text-white lg:text-xl">
-                    Your sleep affects both your body and mind. When you
-                    <br />
-                    can sleep comfortably,
-                </p>
-            </div>
-        </swiper-slide>
-        <swiper-slide class="">
-            <img src="./assets/pics/banner_3.png" alt="" srcset="" />
-            <div class="absolute zip-zip">
-                <p class="py-2 text-xl text-white lg:text-2xl md:text-xl">
-                    New Product
-                </p>
-                <p class="text-5xl font-bold text-white lg:text-7xl">
-                    Flexible
-                </p>
-                <p class="py-2 text-xs text-white lg:text-xl">
-                    Your sleep affects both your body and mind. When you
-                    <br />
-                    can sleep comfortably,
-                </p>
-            </div>
-        </swiper-slide>
-    </swiper-container>
-
-    <!-- ------------------1-->
-    <div class="py-5 bg-white">
-        <div class="container py-5 mx-auto">
-            <div class="grid md:grid-cols-5">
-                <div class="mx-auto my-5">
-                    <div
-                        class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44">
-                        <img src="./assets/pics/badroom.png" alt="" srcset=""
-                            class="flex items-center justify-center p-5" />
-                    </div>
+        <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            navigation="true"
+            space-between="0"
+            loop="true"
+        >
+            <swiper-slide class="">
+                <img src="./assets/pics/banner_3.png" alt="" srcset="" />
+                <div class="absolute zip-zip">
+                    <p class="py-2 text-xl text-white lg:text-2xl md:text-xl">
+                        New Product
+                    </p>
+                    <p class="text-5xl font-bold text-white lg:text-7xl">
+                        Flexible
+                    </p>
+                    <p class="py-2 text-xs text-white lg:text-xl">
+                        Your sleep affects both your body and mind. When you
+                        <br />
+                        can sleep comfortably,
+                    </p>
                 </div>
-                <div class="mx-auto my-5">
-                    <div
-                        class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44">
-                        <img src="./assets/pics/living.png" alt="" srcset=""
-                            class="flex items-center justify-center p-5" />
-                    </div>
+            </swiper-slide>
+            <swiper-slide class="">
+                <img src="./assets/pics/banner_2.png" alt="" srcset="" />
+                <div class="absolute zip-zip">
+                    <p class="py-2 text-xl text-white lg:text-2xl md:text-xl">
+                        New Product
+                    </p>
+                    <p class="text-5xl font-bold text-white lg:text-7xl">
+                        Flexible
+                    </p>
+                    <p class="py-2 text-xs text-white lg:text-xl">
+                        Your sleep affects both your body and mind. When you
+                        <br />
+                        can sleep comfortably,
+                    </p>
                 </div>
-                <div class="mx-auto my-5">
-                    <div
-                        class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44">
-                        <img src="./assets/pics/dining.png" alt="" srcset=""
-                            class="flex items-center justify-center p-5" />
-                    </div>
+            </swiper-slide>
+            <swiper-slide class="">
+                <img src="./assets/pics/banner_3.png" alt="" srcset="" />
+                <div class="absolute zip-zip">
+                    <p class="py-2 text-xl text-white lg:text-2xl md:text-xl">
+                        New Product
+                    </p>
+                    <p class="text-5xl font-bold text-white lg:text-7xl">
+                        Flexible
+                    </p>
+                    <p class="py-2 text-xs text-white lg:text-xl">
+                        Your sleep affects both your body and mind. When you
+                        <br />
+                        can sleep comfortably,
+                    </p>
                 </div>
-                <div class="mx-auto my-5">
-                    <div
-                        class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44">
-                        <img src="./assets/pics/laung.png" alt="" srcset=""
-                            class="flex items-center justify-center p-5" />
+            </swiper-slide>
+        </swiper-container>
+
+        <!-- ------------------1-->
+        <div class="py-5 bg-white">
+            <div class="container py-5 mx-auto">
+                <div class="grid md:grid-cols-5">
+                    <div class="mx-auto my-5">
+                        <div
+                            class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44"
+                        >
+                            <img
+                                src="./assets/pics/badroom.png"
+                                alt=""
+                                srcset=""
+                                class="flex items-center justify-center p-5"
+                            />
+                        </div>
                     </div>
-                </div>
-                <div class="mx-auto my-5">
-                    <div
-                        class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44">
-                        <img src="./assets/pics/chair.png" alt="" srcset=""
-                            class="flex items-center justify-center p-5" />
+                    <div class="mx-auto my-5">
+                        <div
+                            class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44"
+                        >
+                            <img
+                                src="./assets/pics/living.png"
+                                alt=""
+                                srcset=""
+                                class="flex items-center justify-center p-5"
+                            />
+                        </div>
+                    </div>
+                    <div class="mx-auto my-5">
+                        <div
+                            class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44"
+                        >
+                            <img
+                                src="./assets/pics/dining.png"
+                                alt=""
+                                srcset=""
+                                class="flex items-center justify-center p-5"
+                            />
+                        </div>
+                    </div>
+                    <div class="mx-auto my-5">
+                        <div
+                            class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44"
+                        >
+                            <img
+                                src="./assets/pics/laung.png"
+                                alt=""
+                                srcset=""
+                                class="flex items-center justify-center p-5"
+                            />
+                        </div>
+                    </div>
+                    <div class="mx-auto my-5">
+                        <div
+                            class="flex items-center justify-center mx-2 rounded-full hover:border-2 data shadrop-shadow-md border-primary hover:border-dashed w-44 h-44"
+                        >
+                            <img
+                                src="./assets/pics/chair.png"
+                                alt=""
+                                srcset=""
+                                class="flex items-center justify-center p-5"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- --------------------------2--------- -->
-    <div class="container mx-auto">
-        <div class="flex flex-col items-center justify-center">
-            <p class="text-3xl font-bold lg:text-4xl zip-zip">
-                Our Product
-            </p>
-            <p class="pop-pop text-[#6c757d] text-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elitsed
-                <br />
-                do eiusmo tempor incididunt ut labore.
-            </p>
-        </div>
-
-        <!-- ----------------------------------- product -->
-        <div class="flex items-center justify-center py-5">
-            <div class="flex flex-wrap space-x-6 text-xl text-black pop-pop filter_buttons">
-                <button class="cursor-pointer active" data-name="all">
-                    All
-                </button>
-                <button class="cursor-pointer" data-name="New">
-                    New Arrival
-                </button>
-                <button class="cursor-pointer" data-name="Featured">
-                    Featured
-                </button>
-                <button class="cursor-pointer" data-name="Oursale">
-                    Oursale
-                </button>
-                <button class="cursor-pointer" data-name="tending">
-                    tending
-                </button>
-            </div>
-        </div>
-        <div class="grid gap-6 md:grid-cols-4 filterable_cards">
-            <div class="card" data-name="all">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="px-2 md:px-8">
-                        <img src="./assets/pics/product_7.png" alt="" srcset="" class="relative mx-auto" />
-                        <div class="absolute top-0 flex justify-between">
-                            <p class="bg-primary">1</p>
-                            <p class="bg-primary">2</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 space-x-2 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="all">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_8.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="New">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_9.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="New">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_10.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="New">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_11.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="Featured">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_12.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="Oursale">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_13.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-name="tending">
-                <div class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                    <div class="relative px-2 md:px-8">
-                        <a href="#">
-                            <img src="./assets/pics/product_14.png" alt="" srcset="" class="relative mx-auto" />
-                        </a>
-                    </div>
-                    <div class="flex items-center justify-center py-3">
-                        <div class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <button class="">Select option</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-4 text-xl text-center">
-                    <p class="text-[#212529]">
-                        Chair realistic illustration
-                    </p>
-                    <div class="flex items-center justify-center gap-3">
-                        <del class="text-[#6c757d]">$10,00.00</del>
-                        <p class="font-bold">$8,590.00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ------------------------3 -->
-
-    <div class="py-8 bg-white">
+        <!-- --------------------------2--------- -->
         <div class="container mx-auto">
-            <div class="grid gap-3 md:grid-cols-2">
-                <div class="relative w-full h-auto shadow-2xl">
-                    <img src="./assets/pics/best-collection-1.png" alt="" srcset="" />
-                    <div class="absolute left-[45%] lg:top-1/4 top-[20%]">
-                        <p class="text-2xl text-[#343a40] font-bold">
-                            Sale Furniture <br />
-                            For Summer
+            <div class="flex flex-col items-center justify-center">
+                <p class="text-3xl font-bold lg:text-4xl zip-zip">
+                    Our Product
+                </p>
+                <p class="pop-pop text-[#6c757d] text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elitsed
+                    <br />
+                    do eiusmo tempor incididunt ut labore.
+                </p>
+            </div>
+
+            <!-- ----------------------------------- product -->
+            <div class="flex items-center justify-center py-5">
+                <div
+                    class="flex flex-wrap space-x-6 text-xl text-black pop-pop filter_buttons"
+                >
+                    <button class="cursor-pointer active" data-name="all">
+                        All
+                    </button>
+                    <button class="cursor-pointer" data-name="New">
+                        New Arrival
+                    </button>
+                    <button class="cursor-pointer" data-name="Featured">
+                        Featured
+                    </button>
+                    <button class="cursor-pointer" data-name="Oursale">
+                        Oursale
+                    </button>
+                    <button class="cursor-pointer" data-name="tending">
+                        tending
+                    </button>
+                </div>
+            </div>
+            <div class="grid gap-6 md:grid-cols-4 filterable_cards">
+                <div class="card" data-name="all">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="px-2 md:px-8">
+                            <img
+                                src="./assets/pics/product_7.png"
+                                alt=""
+                                srcset=""
+                                class="relative mx-auto"
+                            />
+                            <div class="absolute top-0 flex justify-between">
+                                <p class="bg-primary">1</p>
+                                <p class="bg-primary">2</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 space-x-2 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
                         </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
                     </div>
                 </div>
-                <div class="relative w-full h-auto shadow-2xl">
-                    <img src="./assets/pics/best-collection-2.png" alt="" srcset="" class="" />
-                    <div class="absolute text-2xl lg:top-24 top-20 left-28 pop-pop">
-                        <p class="text-[#343a40]">
-                            Best Luxurias <br />
-                            Collaction
-                        </p>
+                <div class="card" data-name="all">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_8.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="absolute w-[100px] h-[109px] lg:top-32 bottom-0 right-0 lg:right-[31.00%]">
-                        <div class="relative">
-                            <img src="./assets/pics/discount.png" alt="" srcset="" class="" />
-                            <div class="absolute top-0 bottom-0 left-0 right-0 grid place-items-center">
-                                <div class="flex flex-col font-bold text-center">
-                                    <p class="text-xl text-[#343a40]">
-                                        Flet
-                                    </p>
-                                    <p class="text-xl text-[#343a40]">
-                                        20% off
-                                    </p>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="New">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_9.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="New">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_10.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="New">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_11.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="Featured">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_12.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="Oursale">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_13.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="tending">
+                    <div
+                        class="bg-[#f1f1f1] shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                    >
+                        <div class="relative px-2 md:px-8">
+                            <a href="#">
+                                <img
+                                    src="./assets/pics/product_14.png"
+                                    alt=""
+                                    srcset=""
+                                    class="relative mx-auto"
+                                />
+                            </a>
+                        </div>
+                        <div class="flex items-center justify-center py-3">
+                            <div
+                                class="p-4 px-10 bg-white rounded-md shadow-md text-primary pop-pop"
+                            >
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button class="">Select option</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 text-xl text-center">
+                        <p class="text-[#212529]">
+                            Chair realistic illustration
+                        </p>
+                        <div class="flex items-center justify-center gap-3">
+                            <del class="text-[#6c757d]">$10,00.00</del>
+                            <p class="font-bold">$8,590.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------3 -->
+
+        <div class="py-8 bg-white">
+            <div class="container mx-auto">
+                <div class="grid gap-3 md:grid-cols-2">
+                    <div class="relative w-full h-auto shadow-2xl">
+                        <img
+                            src="./assets/pics/best-collection-1.png"
+                            alt=""
+                            srcset=""
+                        />
+                        <div class="absolute left-[45%] lg:top-1/4 top-[20%]">
+                            <p class="text-2xl text-[#343a40] font-bold">
+                                Sale Furniture <br />
+                                For Summer
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-auto shadow-2xl">
+                        <img
+                            src="./assets/pics/best-collection-2.png"
+                            alt=""
+                            srcset=""
+                            class=""
+                        />
+                        <div
+                            class="absolute text-2xl lg:top-24 top-20 left-28 pop-pop"
+                        >
+                            <p class="text-[#343a40]">
+                                Best Luxurias <br />
+                                Collaction
+                            </p>
+                        </div>
+                        <div
+                            class="absolute w-[100px] h-[109px] lg:top-32 bottom-0 right-0 lg:right-[31.00%]"
+                        >
+                            <div class="relative">
+                                <img
+                                    src="./assets/pics/discount.png"
+                                    alt=""
+                                    srcset=""
+                                    class=""
+                                />
+                                <div
+                                    class="absolute top-0 bottom-0 left-0 right-0 grid place-items-center"
+                                >
+                                    <div
+                                        class="flex flex-col font-bold text-center"
+                                    >
+                                        <p class="text-xl text-[#343a40]">
+                                            Flet
+                                        </p>
+                                        <p class="text-xl text-[#343a40]">
+                                            20% off
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -448,141 +575,281 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ------------------------------ 4  -->
-    <div class="bg-white">
-        <div class="container py-10 mx-auto">
-            <p class="text-3xl font-bold text-center text-black">
-                Latest News
-            </p>
-            <p class="py-2 text-2xl text-center text-[#6c757d]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elitsed
-                do eiusmo tempor incididunt ut labore.
-            </p>
+        <!-- ------------------------------ 4  -->
+        <div class="bg-white">
+            <div class="container py-10 mx-auto">
+                <p class="text-3xl font-bold text-center text-black">
+                    Latest News
+                </p>
+                <p class="py-2 text-2xl text-center text-[#6c757d]">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elitsed
+                    do eiusmo tempor incididunt ut labore.
+                </p>
 
-            <div class="grid gap-6 mx-4 md:grid-cols-3 lg:grid-cols-3">
-                <div class="bg-[#f1f1f1]">
-                    <div class="group">
-                        <img src="./assets/pics/blog_1.png" alt=""
-                            class="object-cover w-full h-full transition-all rounded-md group-hover:scale-50" />
+                <div class="grid gap-6 mx-4 md:grid-cols-3 lg:grid-cols-3">
+                    <div class="overflow-hidden shadow-md">
+                        <div class="group">
+                            <img
+                                src="./assets/pics/blog_1.png"
+                                alt=""
+                                class="object-cover w-full h-full transition ease-out transform scale-100 rounded-t-md hover:scale-105"
+                            />
+                        </div>
+
+                        <div
+                            class="border border-[#6c757d] rounded-md rounded-t-none border-t-0"
+                        >
+                            <div class="flex flex-col px-2 py-2">
+                                <p
+                                    class="text-xl text-black hover:text-primary zip-zip"
+                                >
+                                    When you Buy a Coffee Table
+                                </p>
+                                <p class="text-[#6c757d] font-light">
+                                    By Prithvi Jain, on 18 Jan , ❤ 2023 1125
+                                </p>
+                                <span class="w-16 my-3 border border-[#6c757d]">
+                                </span>
+                                <p
+                                    class="text-start font-normal text-[#6c757d]"
+                                >
+                                    If you redecorated in recent years, you may
+                                    have opted for the popular tones that
+                                    dominated interior design. Think bright and
+                                    decor with white walls, rugs and neutral
+                                    colors for sofas and chairs.
+                                </p>
+                            </div>
+                            <div class="border border-[#6c757d]"></div>
+                            <div class="flex justify-between py-2 mx-2">
+                                <div
+                                    class="flex items-center justify-center gap-1 py-2 zip-zip"
+                                >
+                                    <p class="text-xl font-bold text-primary">
+                                        13
+                                    </p>
+                                    <span
+                                        class="h-10 mx-2 border border-[#6c757d]"
+                                    ></span>
+                                    <div
+                                        class="flex flex-col text-end pop-pop text-[#6c757d]"
+                                    >
+                                        <p>Jan</p>
+                                        <p>2023</p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center justify-center gap-2 text-[#6c757d] pop-pop"
+                                >
+                                    <i
+                                        class="text-xl fa-regular fa-message text-primary"
+                                    ></i>
+                                    <p>COMMENT</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="text-2xl text-[#495057] pop-pop">
-                            <p>Wooden Chair</p>
+                    <div class="overflow-hidden shadow-md">
+                        <div class="group">
+                            <img
+                                src="./assets/pics/blog_2.png"
+                                alt=""
+                                class="object-cover w-full h-full transition ease-out transform scale-100 rounded-t-md hover:scale-105"
+                            />
                         </div>
-                        <p class="text-center text-[#6c757d]">
-                            This product is handcrafted by skilled artisans,
-                            and
-                            <br />
-                            therefore will have minor variations. Actual
-                            product
-                            <br />
-                            colour may vary from the images shown due to
-                            lighting <br />
-                            conditions.
-                        </p>
-                        <div class="py-4">
-                            <p class="text-2xl text-black">
-                                <del class="text-[#6c757d]">$9.59.00</del>
-                                $5,69.00
-                            </p>
+
+                        <div
+                            class="border border-[#6c757d] rounded-md rounded-t-none border-t-0"
+                        >
+                            <div class="flex flex-col px-2 py-2">
+                                <p
+                                    class="text-xl text-black hover:text-primary zip-zip"
+                                >
+                                    When you Buy a Coffee Table
+                                </p>
+                                <p class="text-[#6c757d] font-light">
+                                    By Prithvi Jain, on 18 Jan , ❤ 2023 1125
+                                </p>
+                                <span class="w-16 my-3 border border-[#6c757d]">
+                                </span>
+                                <p
+                                    class="text-start font-normal text-[#6c757d]"
+                                >
+                                    If you redecorated in recent years, you may
+                                    have opted for the popular tones that
+                                    dominated interior design. Think bright and
+                                    decor with white walls, rugs and neutral
+                                    colors for sofas and chairs.
+                                </p>
+                            </div>
+                            <div class="border border-[#6c757d]"></div>
+                            <div class="flex justify-between py-2 mx-2">
+                                <div
+                                    class="flex items-center justify-center gap-1 py-2 zip-zip"
+                                >
+                                    <p class="text-xl font-bold text-primary">
+                                        13
+                                    </p>
+                                    <span
+                                        class="h-10 mx-2 border border-[#6c757d]"
+                                    ></span>
+                                    <div
+                                        class="flex flex-col text-end pop-pop text-[#6c757d]"
+                                    >
+                                        <p>Jan</p>
+                                        <p>2023</p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center justify-center gap-2 text-[#6c757d] pop-pop"
+                                >
+                                    <i
+                                        class="text-xl fa-regular fa-message text-primary"
+                                    ></i>
+                                    <p>COMMENT</p>
+                                </div>
+                            </div>
                         </div>
-                        <button class="py-2 text-2xl">Shop Now</button>
                     </div>
-                </div>
-                <div class="bg-[#f1f1f1]">
-                    <div class="group">
-                        <img src="./assets/pics/blog_3.png" alt=""
-                            class="object-cover w-full h-full transition-all rounded-md group-hover:scale-50" />
-                    </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="text-2xl text-[#495057] pop-pop">
-                            <p>Wooden Chair</p>
+                    <div class="overflow-hidden shadow-md">
+                        <div class="group">
+                            <img
+                                src="./assets/pics/blog_4.png"
+                                alt=""
+                                class="object-cover w-full h-full transition ease-out transform scale-100 hover:scale-105"
+                            />
                         </div>
-                        <p class="text-center text-[#6c757d]">
-                            This product is handcrafted by skilled artisans,
-                            and
-                            <br />
-                            therefore will have minor variations. Actual
-                            product
-                            <br />
-                            colour may vary from the images shown due to
-                            lighting <br />
-                            conditions.
-                        </p>
-                        <div class="py-4">
-                            <p class="text-2xl text-black">
-                                <del class="text-[#6c757d]">$9.59.00</del>
-                                $5,69.00
-                            </p>
+
+                        <div
+                            class="border border-[#6c757d] rounded-md rounded-t-none border-t-0"
+                        >
+                            <div class="flex flex-col px-2 py-2">
+                                <p
+                                    class="text-xl text-black hover:text-primary zip-zip"
+                                >
+                                    When you Buy a Coffee Table
+                                </p>
+                                <p class="text-[#6c757d] font-light">
+                                    By Prithvi Jain, on 18 Jan , ❤ 2023 1125
+                                </p>
+                                <span class="w-16 my-3 border border-[#6c757d]">
+                                </span>
+                                <p
+                                    class="text-start font-normal text-[#6c757d]"
+                                >
+                                    If you redecorated in recent years, you may
+                                    have opted for the popular tones that
+                                    dominated interior design. Think bright and
+                                    decor with white walls, rugs and neutral
+                                    colors for sofas and chairs.
+                                </p>
+                            </div>
+                            <div class="border border-[#6c757d]"></div>
+                            <div class="flex justify-between py-2 mx-2">
+                                <div
+                                    class="flex items-center justify-center gap-1 py-2 zip-zip"
+                                >
+                                    <p class="text-xl font-bold text-primary">
+                                        13
+                                    </p>
+                                    <span
+                                        class="h-10 mx-2 border border-[#6c757d]"
+                                    ></span>
+                                    <div
+                                        class="flex flex-col text-end pop-pop text-[#6c757d]"
+                                    >
+                                        <p>Jan</p>
+                                        <p>2023</p>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="flex items-center justify-center gap-2 text-[#6c757d] pop-pop"
+                                >
+                                    <i
+                                        class="text-xl fa-regular fa-message text-primary"
+                                    ></i>
+                                    <p>COMMENT</p>
+                                </div>
+                            </div>
                         </div>
-                        <button class="py-2 text-2xl">Shop Now</button>
-                    </div>
-                </div>
-                <div class="bg-[#f1f1f1]">
-                    <div class="group">
-                        <img src="./assets/pics/blog_1.png" alt=""
-                            class="object-cover w-full h-full transition-all rounded-md group-hover:scale-50" />
-                    </div>
-                    <div class="flex flex-col items-center justify-center">
-                        <div class="text-2xl text-[#495057] pop-pop">
-                            <p>Wooden Chair</p>
-                        </div>
-                        <p class="text-center text-[#6c757d]">
-                            This product is handcrafted by skilled artisans,
-                            and
-                            <br />
-                            therefore will have minor variations. Actual
-                            product
-                            <br />
-                            colour may vary from the images shown due to
-                            lighting <br />
-                            conditions.
-                        </p>
-                        <div class="py-4">
-                            <p class="text-2xl text-black">
-                                <del class="text-[#6c757d]">$9.59.00</del>
-                                $5,69.00
-                            </p>
-                        </div>
-                        <button class="py-2 text-2xl">Shop Now</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    @@include('./partials/footer.html')
-    <script>
-        const filterButtons = document.querySelectorAll(
-            ".filter_buttons button"
-        );
-        const filterableCards = document.querySelectorAll(
-            ".filterable_cards .card"
-        );
+        <div class="w-full h-full md:w-full md:h-[400px] relative">
+            <img
+                src="../src/assets/pics/banner_2.png"
+                class="relative object-cover w-full h-full"
+                alt=""
+                srcset=""
+            />
+            <div
+                class="absolute top-0 bottom-0 left-0 right-0 grid place-items-center"
+            >
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-3xl font-bold text-black">Get In Touch</p>
+                    <p class="text-[#6c757d]">
+                        Stay Updated on all that's new add noteworthy.
+                    </p>
+                    <div class="py-8">
+                        <input
+                            type="text"
+                            placeholder="Your Email..."
+                            name=""
+                            id=""
+                            class="md:w-[546px] shadow-md px-2 py-3 placeholder:text-[#6c757d] pop-pop"
+                        />
+                        <button
+                            class="relative px-2 py-3 overflow-hidden font-semibold leading-none tracking-wider uppercase border border-black left-2 text-balance btn2 hover:text-white"
+                            type="button"
+                        >
+                            <span class="absolute inset-0 bg-black"></span>
+                            <span
+                                class="absolute inset-0 flex items-center justify-center font-bold"
+                            >
+                                Subscribe
+                            </span>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        const filterCards = (e) => {
-            document
-                .querySelector(".filter_buttons .active")
-                .classList.remove("active");
-            e.target.classList.add("active");
+        @@include('./partials/footer.html')
+        <script>
+            const filterButtons = document.querySelectorAll(
+                ".filter_buttons button"
+            );
+            const filterableCards = document.querySelectorAll(
+                ".filterable_cards .card"
+            );
 
-            filterableCards.forEach((card) => {
-                card.classList.add("hidden");
-                if (
-                    card.dataset.name === e.target.dataset.name ||
-                    e.target.dataset.name === "all"
-                ) {
-                    card.classList.remove("hidden");
-                }
-            });
-        };
-        filterButtons.forEach((button) =>
-            button.addEventListener("click", filterCards)
-        );
-    </script>
+            const filterCards = (e) => {
+                document
+                    .querySelector(".filter_buttons .active")
+                    .classList.remove("active");
+                e.target.classList.add("active");
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-</body>
+                filterableCards.forEach((card) => {
+                    card.classList.add("hidden");
+                    if (
+                        card.dataset.name === e.target.dataset.name ||
+                        e.target.dataset.name === "all"
+                    ) {
+                        card.classList.remove("hidden");
+                    }
+                });
+            };
+            filterButtons.forEach((button) =>
+                button.addEventListener("click", filterCards)
+            );
+        </script>
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    </body>
 </html>
